@@ -9,7 +9,16 @@ packages = [{include = "bbs_api"}]
 [tool.poetry.dependencies]
 python = "^3.11"
 fastapi = "^0.95.0"
+uvicorn = "^0.21.1"
+tinydb = "^4.7.1"
+gunicorn = "^20.1.0"
+taskipy = "^1.10.4"
 
+[tool.taskipy.tasks]
+start = { cmd = "uvicorn bbs_api.main:app --reload", help = "launch test server" }
+
+[tool.poetry.group.dev.dependencies]
+autopep8 = "^2.0.2"
 
 [build-system]
 requires = ["poetry-core"]
