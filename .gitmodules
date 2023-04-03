@@ -1,0 +1,3 @@
+[submodule "bbs-client"]
+	path = bbs-client
+	url = git@github.com:BuntinJP/bbs-client.git
